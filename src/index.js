@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const myFirstElement = <h1>Hello React</h1>
+const x = 5;
+
+
+
+const myElement = <h1> {(x) ? "Hello" : "Goodbye"} </h1>
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    myFirstElement
+    myElement
 );
+
 
