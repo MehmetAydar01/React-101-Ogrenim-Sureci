@@ -6,6 +6,14 @@ import Car from './Components/Car';
 
 
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <Car />
+);
+
+
+
+
 
 /* COMPONENT */
 
@@ -43,9 +51,37 @@ import Car from './Components/Car';
 
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <Car />
-);
+/* PROPS */
+
+
+/*
+    const myElement = <Car brand="Ford" />; bir componenti değişkene aktarıp, props özelliği verebiliyoruz. myElement render edilmeli.
+
+    function Car(props) {
+        return <h2> I am a {props.brand}! </h2>;
+    }
+
+*/
+
+/*
+    function Car(props) {
+        return <h2> I am a {props.brand.name + " " + props.brand.model}! </h2>;
+    }
+
+    function Garage() {
+        const carInfo = {
+            name: "Ford",
+            model: "Mustang"
+        }
+        return (
+            <>
+                <h1>Who lives in my garage</h1>
+                <Car brand = {carInfo} />
+            </>
+        )
+    }
+
+    bu fonk. comp. çalışması için render etmemiz gerek <Garage />.
+*/
 
 
