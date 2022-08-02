@@ -7,11 +7,11 @@ import Car from './Components/Car';
 
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Car name="Mehmet" />
+    <Car name="Ford"/>
 );
-
 
 
 
@@ -52,8 +52,8 @@ root.render(
 
 
 
-/* PROPS */
 
+/* PROPS */
 
 /*
     const myElement = <Car brand="Ford" />; bir componenti değişkene aktarıp, props özelliği verebiliyoruz. myElement render edilmeli.
@@ -85,4 +85,119 @@ root.render(
     bu fonk. comp. çalışması için render etmemiz gerek <Garage />.
 */
 
+
+
+
+/* Events */
+
+/*
+    const Football = () => {
+        const shoot = (a, b) => {
+            alert(b.type + " " + a);
+        }
+
+        return(
+            <button onClick={ (e) => shoot("Goal", e) }>Take the shot!</button>
+        );
+    }
+*/
+
+
+
+
+/*
+    REACT CONDITIONAL RENDERING
+
+    const MissedGoal = () => {
+        return <h1>MISSED!</h1>;
+    }
+
+
+    const MadeGoal = () => {
+        return <h1>GOAL!</h1>
+    }
+
+
+    const Goal = (props) => {
+
+        const isGoal = props.isGoal;
+
+        if (isGoal) {
+            return <MadeGoal />
+        }
+
+        return <MissedGoal />
+
+    }
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Goal isGoal={true} />
+    );
+
+*/
+
+
+
+
+/*
+    LOGICAL && OPERATOR
+
+    const Garage = (props) => {
+
+        const cars = props.cars
+
+        return (
+            <>
+                <h1>Garage</h1>
+                {
+                    cars.length > 0 &&
+                    <h2>You have {cars.length} cars in your garage.</h2>
+                }
+            </>
+        )
+
+    }
+
+    const cars = ["Ford", "BMW", "Audi"];
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Garage cars = {cars} />
+    );
+
+*/
+
+
+
+
+/*
+    TERNARY OPERATOR
+
+    const MadeGoal = () => {
+        return <h1>GOAL!</h1>
+    }
+
+    const MissedGoal = () => {
+        return <h1>MISSED!</h1>
+    }
+
+    const Goal = (props) => {
+        const isGoal = props.isGoal;
+        return (
+            <>
+                { isGoal ? <MadeGoal /> : <MissedGoal />  }
+            </>
+        )
+    }
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Goal isGoal={false} />
+    );
+
+*/
 
