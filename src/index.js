@@ -5,12 +5,14 @@ import ReactDOM from 'react-dom/client';
 import Car from './Components/Car';
 
 
+const carName = "BMW"
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Car name="Ford"/>
+    <Car name={carName} />
 );
 
 
@@ -200,4 +202,119 @@ root.render(
     );
 
 */
+
+
+
+
+/*
+    REACT LISTS
+
+    const Car = (props) => {
+        return <li> {props.keys} I am a {props.brand} </li>;
+    }
+
+    const Garage = () => {
+        const cars = [
+            {id: 1, brand: 'Ford'},
+            {id: 2, brand: 'BMW'},
+            {id: 3, brand: 'Audi'}
+        ];
+
+        //Alttaki ul içinde bulunan {cars.map( (car) => { return <Car key={car.id} brand={car.brand} /> } )} kodu, süslü parantez kullanacaksak map içerisinde.
+        //return yazmayı unutmamalıyız. Tek satırlarda süslü paranteze almaya gerek yok ve return yazmaya da gerek yok.
+        return (
+            <>
+                <h1> Who lives in my garage </h1>
+                <ul>
+                    {cars.map( (car) => <Car keys={car.id} brand={car.brand} />  )}
+                    {}
+                </ul>
+            </>
+        )
+        // map methodunu kullanırken, bu metodu uygulayacağımız dizinin: Genellikle anahtar, her öğeye atanmış benzersiz bir kimliği olmalıdır (burada verdiğimiz id ler gibi..). Son çare olarak dizi indexini anahtar olarak kullanabilirsiniz.
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Garage />
+    );
+
+*/
+
+
+
+
+/*
+    I CREATED THIS LIST.
+
+    const Member = (props) => {
+        return <li> {props.ids}. Family Member : {props.firstNames} </li>
+    };
+
+    const Familys = () => {
+
+        const familyMembers = [
+            {id: 1, firstName: 'Elif'},
+            {id: 2, firstName: 'Serdar'},
+            {id: 3, firstName: 'Mehmet'},
+            {id: 4, firstName: 'Nazlı'},
+            {id: 5, firstName: 'Emirhan'},
+            {id: 6, firstName: 'Helin'},
+            {id: 7, firstName: 'Ezgi'},
+            {id: 8, firstName: 'Ayaz'}
+        ];
+
+        return (
+            <div>
+                <h1> FAMILY MEMBERS :</h1>
+                {familyMembers.map( (members) => {return <Member ids={members.id} firstNames={members.firstName} />}  )}
+            </div>
+        )
+
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Familys />
+    );
+
+*/
+
+
+
+
+/*
+    GROCERY LIST UYGULAMA
+
+    const GroceryList = () => {
+        const items = [
+            {id: 1, itemsName: 'bread'},
+            {id: 2, itemsName: 'milk'},
+            {id: 3, itemsName: 'eggs'}
+        ];
+
+        return (
+            <>
+                <h1>Grocery List</h1>
+                <ul>
+                    {items.map( (item) => {
+                        return <li idMiz={item.id}> {item.id} {item.itemsName} </li>
+                    } )}
+                </ul>
+            </>
+        )
+
+    };
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <GroceryList />
+    );
+
+*/
+
+
+
+
 
