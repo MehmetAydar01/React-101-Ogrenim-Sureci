@@ -1,19 +1,20 @@
-import { useState } from 'react';
-// import React from 'react';
+// Form işlemlerinde useState Hookunu aktif etmemiz gerekir.
+// import { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // farklı dosya oluşturup import ettik, şimdi bu dosyada import ettiğimiz componentimizi kullanabiliriz.
-// import Car from './Components/Car';
+import Car from './Components/Car';
 
-// const firstName = "Mehmet";
-// const yearsOld = 22;
+const firstName = "Mehmet";
+const yearsOld = 22;
 
-// <Car name={firstName} years={yearsOld} />
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    
+    <Car name={firstName} years={yearsOld} />
 );
 
 
