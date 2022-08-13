@@ -1,19 +1,26 @@
-import React from 'react';
+import { useState } from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // farklı dosya oluşturup import ettik, şimdi bu dosyada import ettiğimiz componentimizi kullanabiliriz.
-import Car from './Components/Car';
+// import Car from './Components/Car';
 
+// const firstName = "Mehmet";
+// const yearsOld = 22;
 
-const carName = "BMW";
-
-
+// <Car name={firstName} years={yearsOld} />
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Car name={carName} />
+    
 );
+
+
+
+
+
+
 
 
 
@@ -315,6 +322,150 @@ root.render(
 */
 
 
+
+
+/*
+    REACT FORMS
+
+    const MyForm = () => {
+
+        const [name, setName] = useState("");
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            alert(`The name you entered was: ${name}`);
+        };
+
+        return (
+            <form onSubmit={handleSubmit}>
+                <label>Enter your name:
+                    <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    />
+                </label>
+                <input type="submit" />
+            </form>
+        )
+    }
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <MyForm />
+    );
+
+*/
+
+
+
+
+/*
+    Multiple Input Fields - Çoklu Giriş Alanları
+    
+    const MyForm = () => {
+        const [inputs, setInputs] = useState({});
+
+        const handleChange = (event) => {
+            const name = event.target.name;
+            const value = event.target.value;
+            setInputs(values => ({...values, [name]: value}))
+        };
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            console.log(inputs);
+        };
+
+        return (
+            <form onSubmit={handleSubmit}>
+                <label>Enter your name:
+                    <input
+                        type="text"
+                        name="username"
+                        value={inputs.username || ""}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>Enter your age:
+                    <input
+                        type="number"
+                        name="age"
+                        value={inputs.age || ""}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>Sorunuzu girin:
+                    <input
+                        type="text"
+                        name="sorum"
+                        value={inputs.sorum || ""}
+                        onChange={handleChange}
+                    />
+                    
+                </label>
+                <input type="submit" />
+            </form>
+        )
+
+    };
+
+*/
+
+
+
+
+/*
+    // TEXTAREA (<textarea />)
+
+    const MyForm = () => {
+
+        const[textArea, setTextArea] = useState(
+            "The content of a textarea goes in the value attribute"
+        )
+
+        const handleChange = (e) => {
+            setTextArea(e.target.value);
+        }
+
+        return (
+            <form>
+                <textarea value={textArea} onChange={handleChange} />
+            </form>
+        )
+
+    }
+
+*/
+
+
+
+
+/*
+    // SELECT
+
+    const MyForm = () => {
+
+        const [myCar, setMyCar] = useState("Volvo");
+
+        const handleChange = (e) => {
+            setMyCar(e.target.value);
+        }
+
+        return (
+            <form>
+                <select value={myCar} onChange={handleChange}>
+                    <option value="Ford">Ford</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Fiat">Fiat</option>
+                </select>
+            </form>
+        )
+
+    }
+
+*/
 
 
 
