@@ -1,20 +1,30 @@
-// Form işlemlerinde useState Hookunu aktif etmemiz gerekir.
-// import { useState } from 'react';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
+import NoPage from './pages/NoPage';
 
-// farklı dosya oluşturup import ettik, şimdi bu dosyada import ettiğimiz componentimizi kullanabiliriz.
-import Car from './Components/Car';
-
-const firstName = "Mehmet";
-const yearsOld = 22;
-
-
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path='blogs' element={<Blogs />} />
+                    <Route path='contact' element={<Contact />} />
+                    <Route path='*' element={<NoPage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Car name={firstName} years={yearsOld} />
+    <App />
 );
 
 
@@ -27,6 +37,9 @@ root.render(
 
 
 /* COMPONENT */
+
+// farklı dosya oluşturup import ettik, şimdi bu dosyada import ettiğimiz componentimizi kullanabiliriz.
+// import Car from './Components/Car';
 
 
 /* class Car extends React.Component {
@@ -327,6 +340,9 @@ root.render(
 
 /*
     REACT FORMS
+
+    // Form işlemlerinde useState Hookunu aktif etmemiz gerekir.
+    // import { useState } from 'react';
 
     const MyForm = () => {
 
