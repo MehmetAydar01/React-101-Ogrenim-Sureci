@@ -1,0 +1,14 @@
+.bigblue {
+    color: dodgerblue;
+    padding: 40px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#deneme {
+    color: yellow;
+    text-align: center;
+    background-color: blueviolet;
+    width: 50%;
+    margin: 0 auto;
+}

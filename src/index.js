@@ -1,39 +1,22 @@
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import Blogs from './pages/Blogs';
-import Contact from './pages/Contact';
-import NoPage from './pages/NoPage';
+// import { useState } from "react";
+import React from "react";
+import ReactDOM  from "react-dom/client";
+// import Car from './Car';
+// import './App.css';
 
-export default function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path='blogs' element={<Blogs />} />
-                    <Route path='contact' element={<Contact />} />
-                    <Route path='*' element={<NoPage />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    )
-}
+
+// Not: React Memoya Hookslardan sonra bakılacak.
+
+
+
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    
 );
-
-
-
-
-
-
-
-
 
 
 /* COMPONENT */
@@ -484,5 +467,167 @@ root.render(
 
 */
 
+
+
+
+/*
+    // REACT ROUTER
+
+    // Create React App, sayfa yönlendirmeyi içermez. React Router en popüler çözümdür.
+
+    // Uygulamamıza React Router eklemek için, uygulamamızın kök dizininden terminalde bunu çalıştırmalıyız:
+    // npm i -D react-router-dom
+
+    // Klasör Yapısı src/pages/:
+    // Layout.js
+    // Home.js
+    // Blogs.js
+    // Contact.js
+    // NoPage.js
+
+
+    // index.js
+
+    import ReactDOM from 'react-dom/client';
+    import { BrowserRouter, Routes, Route } from 'react-router-dom';
+    import Layout from './pages/Layout';
+    import Home from './pages/Home';
+    import Blogs from './pages/Blogs';
+    import Contact from './pages/Contact';
+    import NoPage from './pages/NoPage';
+
+    export default function App() {
+        return (
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path='blogs' element={<Blogs />} />
+                        <Route path='contact' element={<Contact />} />
+                        <Route path='*' element={<NoPage />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        )
+    }
+
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <App />
+    );
+*/
+
+
+
+
+/*
+    // REACT CSS
+
+    // React'i CSS ile stillendirmenin birçok yolu vardır, burada üç yaygın yolu daha yakından inceliyor olacağız.
+
+    1- Inline styling
+    2- CSS stylesheets
+    3- CSS Modules
+*/
+
+
+/*
+    // 1 - INLINE STYLING
+
+    const Header = () => {
+        return (
+            <>
+                <h1 style={{color: "red", fontSize: "32px", fontWeight: "100"}}>Mehmet Aydar</h1>
+                <p style={{color:"blue", fontSize: "50px"}}>Add a little style </p>
+            </>
+        )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Header />
+    );
+
+*/
+
+
+
+/*
+    // Inline styling
+
+    // Ayrıca stil bilgilerine sahip bir nesne oluşturabilir ve ona stil özelliğinde başvurabiliriz.
+
+    const MyHeader = () => {
+        const myStyle = {
+            color: "blue",
+            backgroundColor: "yellow",
+            width: "80%",
+            fontSize: "30px",
+            padding: "20px",
+            fontFamily: "Sans-Serif"
+        };
+
+        return (
+            <>
+                <p style={myStyle}>Hello Style!</p>
+            </>
+        )
+
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <MyHeader />
+    );
+
+*/
+
+
+
+/*
+    // 2 - CSS STYLESHEET
+
+    // Not: Dosyayı istediğimiz gibi arayabiliriz, sadece doğru dosya uzantısını unutmamamız gerek.
+
+    // CSS stilimizi ayrı bir dosyaya yazabiliriz, dosyayı .css dosya uzantısıyla kaydedip uygulamamıza aktarabiliriz.
+
+    // import './App.css';
+
+    const BodyStyle = () => {
+    return (
+        <>
+            <h1>Hello QXyGeN!</h1>
+            <p>Add a little style!.</p>
+        </>
+    )
+} 
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <BodyStyle />
+    );
+
+*/
+
+
+
+/*
+    // 3 - CSS MODULES
+
+    import Car from './Car';
+
+    // .module uzantısı olmadan CSS Modules'ları kullanamayız. Örneğin; style.module.css vb.
+
+    // CSS Modülleri, ayrı dosyalara yerleştirilen COMPONENTLAR için uygundur.
+
+    // Bir modülün içindeki CSS, yalnızca onu içe aktaran COMPONENT için kullanılabilir ve ad çakışmaları konusunda endişelenmemize gerek yoktur.
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <Car />
+    );
+
+*/
 
 
