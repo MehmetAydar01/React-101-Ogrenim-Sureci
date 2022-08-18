@@ -617,7 +617,7 @@ root.render(
 
     import Car from './Car';
 
-    // .module uzantısı olmadan CSS Modules'ları kullanamayız. Örneğin; style.module.css vb.
+    // .module uzantısı olmadan CSS Modules'ları kullanamayız. Örneğin; style.module.css vb. gibi olmalı.
 
     // CSS Modülleri, ayrı dosyalara yerleştirilen COMPONENTLAR için uygundur.
 
