@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import React from "react";
 import ReactDOM  from "react-dom/client";
+import './my-sass.scss';
 // import Car from './Car';
 // import './App.css';
 
@@ -8,14 +9,31 @@ import ReactDOM  from "react-dom/client";
 // Not: React Memoya Hookslardan sonra bakılacak.
 
 
+const Header = () => {
+    return (
+        <>
+            <h1> Hello SCSS </h1>
+            <p> Add a little style!. </p>
+        </>
+    )
+}
 
+/*
+    REACT SCSS/SASS STYLING
 
+    Eğer create-react-app projemizde kullanıyorsak Sass'ı kolaylıkla kurabilir ve React projelerimizde kullanabiliriz.
 
+    Terminalimizde bu komutu çalıştırarak Sass'ı kurabiliriz:
 
+    npm i sass
+
+    // Sass dosyasını bir CSS dosyasını içe aktardığımız gibi içe aktarırız:
+    // import './my-sass.scss';
+*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    
+    <Header />
 );
 
 
